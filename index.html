@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+    SEO META TAGS — Edit these with your own info
+  ============================================================ -->
+  <title>Avishkar Khatik | Full Stack Developer| Mobile Application Developer</title>
+  <meta name="description" content="Full Stack Developer specializing in Php, Front-End, and dynamic websites. Building scalable products that matter." />
+  <meta name="keywords" content="Full Stack Developer, Php, Front-end, Web Developer, Portfolio" />
+  <meta name="author" content="Avishkar Khatik" />
+
+  <!-- Open Graph (LinkedIn / Facebook preview) -->
+  <meta property="og:title" content="Avishkar Khatik | Full Stack Developer" />
+  <meta property="og:description" content="Building scalable products with Php, Front-End, and dynamic websites" />
+  <meta property="og:image" content="images/og-preview.png" />
+  <meta property="og:url" content="https://www.linkedin.com/in/avishkar-khatik/" />
+  <meta property="og:type" content="website" />
+
+
+  <!-- icon cdn -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- EmailJS Cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://alexKhatik.dev" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+  PRELOADER
+============================================================ -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">AK</div>
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ============================================================
+  CUSTOM CURSOR
+============================================================ -->
+<div id="cursor-dot"></div>
+<div id="cursor-outline"></div>
+
+<!-- ============================================================
+  NAVBAR
+============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <!-- EDIT: Change "AM" to your initials -->
+    <a class="navbar-brand" href="#hero">AK</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <button class="btn-theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="bi bi-moon-fill" id="themeIcon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+  HERO SECTION
+============================================================ -->
+<section id="hero">
+  <div id="particles-canvas"></div>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="hero-tag" data-aos="fade-up" data-aos-delay="100">
+        <span class="status-dot"></span> Available for hire
+      </div>
+      <!-- EDIT: Change name and roles -->
+      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
+        Avishkar <span class="accent">Khatik</span>
+      </h1>
+      <div class="hero-roles" data-aos="fade-up" data-aos-delay="300">
+        <span>I build </span>
+        <span class="typewriter" id="typewriter"></span>
+      </div>
+      <!-- EDIT: Change your short bio -->
+      <p class="hero-bio" data-aos="fade-up" data-aos-delay="400">
+        Final-year Diploma Computer Engineering student with hands-on experience in web development and
+        Java programming. <br>Proven ability to build client-based applications, lead projects, and deliver solutions under deadlines. 
+        <br> foundation in full-stack development, problem-solving, and teamwork. 
+      </p>
+      <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+        <a href="#projects" class="btn-primary-custom">View My Work <i class="bi bi-arrow-right"></i></a>
+        <a href="#contact" class="btn-outline-custom">Hire Me</a>
+        <!-- EDIT: Update resume file path -->
+        <a href="assets/resume.pdf" class="btn-ghost-custom" download>
+          <i class="bi bi-download"></i> Resume
+        </a>
+      </div>
+      <div class="hero-socials" data-aos="fade-up" data-aos-delay="600">
+        <!-- EDIT: Replace # with your actual profile URLs -->
+        <a href="https://github.com/Avii-Patil" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/avishkar-khatik" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://avishkarkhatik15@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
+      <!-- EDIT: Replace with your photo at images/profile.jpg -->
+      <div class="profile-frame">
+        <img src="images/profile.jpg" alt="Avishkar Khatik" class="profile-img" onerror="this.src='https://placehold.co/400x480/1a1a2e/e94560?text=Your+Photo'" />
+        <div class="profile-badge profile-badge-1">
+          <i class="bi bi-star-fill"></i> 5+ Projects
+        </div>
+        <div class="profile-badge profile-badge-2">
+          <i class="bi bi-lightning-fill"></i> Fresher
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+  STATS COUNTERS
+============================================================ -->
+<section id="stats" class="stats-section">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <!-- EDIT: Change numbers to your actual stats -->
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-card">
+          <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+          <p>Projects Done</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card">
+          <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-card">
+          <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+          <p>Years Practicing Student</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-card">
+          <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+          <p>Certifications</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  ABOUT SECTION
+============================================================ -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">About Me</span>
+      <h2 class="section-title">The person behind the code</h2>
+    </div>
+    <div class="row align-items-center g-5 mt-2">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="about-img-wrap">
+          <!-- EDIT: Replace with your about image at images/about.jpg -->
+          <img src="images/about.jpg" alt="About Avishkar" class="about-img" onerror="this.src='https://placehold.co/500x600/1a1a2e/e94560?text=About+Me'" />
+          <div class="about-exp-badge">
+            <strong>3+</strong>
+            <span>Years of<br/>Practicing Student</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <!-- EDIT: Update all personal information below -->
+        <h3 class="about-greeting">Hey there! I'm Avishkar 👋</h3>
+        <p class="about-text">
+          I'm a passionate Full Stack Developer based in <strong>Pune, India</strong>,
+          specializing in building exceptional digital experiences. With a strong foundation
+          in both frontend and backend technologies, I love turning complex ideas into
+          clean, user-friendly applications.
+        </p>
+        <p class="about-text">
+          When I'm not coding, you'll find me contributing to open-source projects,
+          writing tech articles, or exploring the latest in Tech and trends.
+          I believe great software is built at the intersection of technical excellence, real world problem solving
+          and thoughtful design.
+        </p>
+        <div class="about-info-grid">
+          <!-- EDIT: Replace all values with your own -->
+          <div class="about-info-item">
+            <span class="info-label"><i class="bi bi-person"></i> Name</span>
+            <span class="info-value">Avishkar Khatik</span>
+          </div>
+          <div class="about-info-item">
+            <span class="info-label"><i class="bi bi-envelope"></i> Email</span>
+            <span class="info-value">avishkarkhatik15@gmail.com</span>
+          </div>
+          <div class="about-info-item">
+            <span class="info-label"><i class="bi bi-geo-alt"></i> Location</span>
+            <span class="info-value">Pune, India</span>
+          </div>
+          <div class="about-info-item">
+            <span class="info-label"><i class="bi bi-briefcase"></i> Role</span>
+            <span class="info-value">Full Stack Developer</span>
+          </div>
+          <div class="about-info-item">
+            <span class="info-label"><i class="bi bi-mortarboard"></i> Degree</span>
+            <span class="info-value">Diploma in computer engineering</span>
+          </div>
+          <div class="about-info-item">
+            <span class="info-label"><i class="bi bi-circle-fill text-success"></i> Status</span>
+            <span class="info-value">Available as intern or freelancer</span>
+          </div>
+        </div>
+        <div class="mt-4 d-flex gap-3 flex-wrap">
+          <!-- EDIT: Update resume file path -->
+          <a href="assets/resume.pdf" class="btn-primary-custom" download>
+            <i class="bi bi-download me-2"></i>Download Resume
+          </a>
+          <a href="#contact" class="btn-outline-custom">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  SKILLS SECTION
+============================================================ -->
+<section id="skills" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Tech Stack</span>
+      <h2 class="section-title">Skills & Technologies</h2>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="skills-filter" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="tools">Tools & Cloud</button>
+      <button class="filter-btn" data-filter="Ai">Artificial Intelligence Tools </button>
+    </div>
+
+    <!-- EDIT: Add/remove skills. Keep data-category matching filter buttons above -->
+    <div class="skills-grid" id="skillsGrid">
+      <!-- Frontend -->
+      <div class="skill-card" data-category="frontend" data-aos="zoom-in">
+        <i class="bi bi-filetype-html skill-icon"></i>
+        <span class="skill-name">HTML5</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        <span class="skill-pct">85%</span>
+      </div>
+      <div class="skill-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="50">
+        <i class="bi bi-filetype-css skill-icon"></i>
+        <span class="skill-name">CSS3</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        <span class="skill-pct">80%</span>
+      </div>
+      <div class="skill-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="100">
+        <i class="bi bi-filetype-js skill-icon"></i>
+        <span class="skill-name">JavaScript</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        <span class="skill-pct">75%</span>
+      </div>
+      <div class="skill-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="150">
+        <i class="bi bi-bootstrap skill-icon"></i>
+        <span class="skill-name">Bootstrap</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        <span class="skill-pct">90%</span>
+      </div>
+      <div class="skill-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="200">
+        <i class="bi bi-lightning-fill skill-icon"></i>
+        <span class="skill-name">React.js</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="0"></div></div>
+        <span class="skill-pct">0% Learner</span>
+      </div>
+      <div class="skill-card" data-category="frontend" data-aos="zoom-in" data-aos-delay="250">
+        <i class="bi bi-phone skill-icon"></i>
+        <span class="skill-name">React Native</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="0"></div></div>
+        <span class="skill-pct">0% Learner</span>
+      </div>
+      <!-- Backend -->
+      <div class="skill-card" data-category="backend" data-aos="zoom-in">
+        <i class="bi bi-server skill-icon"></i>
+        <span class="skill-name">Node.js</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="0"></div></div>
+        <span class="skill-pct">0% Learner</span>
+      </div>
+      <!-- <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="50">
+        <i class="bi bi-database skill-icon"></i>
+        <span class="skill-name">MongoDB</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        <span class="skill-pct">80%</span>
+      </div> -->
+      <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="100">
+        <i class="bi bi-table skill-icon"></i>
+        <span class="skill-name">MySQL</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        <span class="skill-pct">85%</span>
+      </div>
+      <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="150">
+        <i class="bi bi-code-slash skill-icon"></i>
+        <span class="skill-name">Python</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="30"></div></div>
+        <span class="skill-pct">30% Basic (Learner)</span>
+      </div>
+      <!-- <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="200">
+        <i class="bi bi-hdd-network skill-icon"></i>
+        <span class="skill-name">REST APIs</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        <span class="skill-pct">90%</span>
+      </div> -->
+      <!-- <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="250">
+        <i class="bi bi-diagram-3 skill-icon"></i>
+        <span class="skill-name">GraphQL</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+        <span class="skill-pct">72%</span>
+      </div> -->
+
+      <!-- Tools -->
+      <!-- <div class="skill-card" data-category="tools" data-aos="zoom-in">
+        <i class="bi bi-cloud-upload skill-icon"></i>
+        <span class="skill-name">AWS</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        <span class="skill-pct">78%</span>
+      </div> -->
+      <!-- <div class="skill-card" data-category="tools" data-aos="zoom-in" data-aos-delay="50">
+        <i class="bi bi-box skill-icon"></i>
+        <span class="skill-name">Docker</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        <span class="skill-pct">80%</span>
+      </div> -->
+      <div class="skill-card" data-category="tools" data-aos="zoom-in" data-aos-delay="100">
+        <i class="bi bi-git skill-icon"></i>
+        <span class="skill-name">Git / GitHub</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        <span class="skill-pct">70%</span>
+      </div>
+      
+      <div class="skill-card" data-category="tools" data-aos="zoom-in" data-aos-delay="200">
+        <i class="bi bi-brush skill-icon"></i>
+        <span class="skill-name">Figma</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        <span class="skill-pct">90%</span>
+      </div>
+      <div class="skill-card" data-category="tools" data-aos="zoom-in" data-aos-delay="250">
+        <i class="bi bi-infinity skill-icon"></i>
+        <span class="skill-name">VS Code</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        <span class="skill-pct">80%</span>
+      </div>
+      <div class="skill-card" data-category="tools" data-aos="zoom-in" data-aos-delay="250">
+        <i class="bi bi-infinity skill-icon"></i>
+        <span class="skill-name">Linux</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="35"></div></div>
+        <span class="skill-pct">35%</span>
+      </div>
+      <div class="skill-card" data-category="tools" data-aos="zoom-in" data-aos-delay="250">
+        <i class="bi bi-infinity skill-icon"></i>
+        <span class="skill-name">Android Studio</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        <span class="skill-pct">80%</span>
+      </div>
+
+
+      <!-- Artificial Intelligence Tools -->
+      <div class="skill-card" data-category="Ai" data-aos="zoom-in">
+        <i class="bi bi-robot skill-icon"></i>
+        <span class="skill-name">ChatGPT</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        <span class="skill-pct">90%</span>
+      </div>
+      <div class="skill-card" data-category="Ai" data-aos="zoom-in">
+        <i class="bi bi-robot skill-icon"></i>
+        <span class="skill-name">Claude</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        <span class="skill-pct">90%</span>
+      </div>
+      <div class="skill-card" data-category="Ai" data-aos="zoom-in">
+        <i class="bi bi-robot skill-icon"></i>
+        <span class="skill-name">Gemini</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        <span class="skill-pct">90%</span>
+      </div>
+      <div class="skill-card" data-category="Ai" data-aos="zoom-in">
+        <i class="bi bi-robot skill-icon"></i>
+        <span class="skill-name">Gamma.ai</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        <span class="skill-pct">90%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  PROJECTS SECTION
+============================================================ -->
+<section id="projects" class="section-pad">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
+
+    <!-- Project Filters -->
+    <div class="skills-filter" data-aos="fade-up">
+      <button class="filter-btn active" data-project-filter="all">All</button>
+      <button class="filter-btn" data-project-filter="web">Web App</button>
+      <button class="filter-btn" data-project-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-project-filter="design">UI/UX</button>
+      <button class="filter-btn" data-project-filter="backend">Backend</button>
+    </div>
+
+    <!-- EDIT: Update project cards with your own projects -->
+    <div class="row g-4 mt-2" id="projectsGrid">
+
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4 project-item" data-project-category="web" data-aos="fade-up">
+        <div class="project-card">
+          <!-- EDIT: Replace with your project screenshot at images/project1.jpg -->
+          <div class="project-img-wrap">
+            <img src="images/project1.jpg" alt="NGO Website" class="project-img" onerror="this.src='https://placehold.co/600x380/0f3460/e94560?text=Project+1'" />
+            <div class="project-overlay">
+              <!-- EDIT: Update links -->
+              <a class="project-link" aria-label="Live Demo" onclick="alert('Unavailable due to organizational policies')"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="https://github.com/Avii-Patil/ngo-website" class="project-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Web App</span>
+            <h4 class="project-title">Ngo Website</h4>
+            <p class="project-desc">A responsive website for an NGO to showcase their initiatives and attract volunteers.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Php</span><span>MySql</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6 col-lg-4 project-item" data-project-category="web" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project2.jpg" alt="Static Cafe website" class="project-img" onerror="this.src='https://placehold.co/600x380/0f3460/e94560?text=Project+2'" />
+            <div class="project-overlay">
+              <a class="project-link" aria-label="Live Demo" onclick="alert('Unavailable due technical issues')"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="https://github.com/Avii-Patil/cafe-website" class="project-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Web App</span>
+            <h4 class="project-title">Static Cafe website</h4>
+            <p class="project-desc">A responsive website for a local cafe to display their menu, hours, and contact information.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6 col-lg-4 project-item" data-project-category="mobile" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project3.jpg" alt="Password Generator" class="project-img" onerror="this.src='https://placehold.co/600x380/0f3460/e94560?text=Project+3'" />
+            <div class="project-overlay">
+              <a href="" class="project-link" aria-label="Live Demo" onclick="alert('unavailable due to technical compatiblity')"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="https://github.com/Avii-Patil/pass-generator" class="project-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Mobile App</span>
+            <h4 class="project-title">Password Generator</h4>
+            <p class="project-desc">A secure and user-friendly password generator with customizable options and clipboard integration.</p>
+            <div class="project-tags">
+              <span>XML</span><span>Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-6 col-lg-4 project-item" data-project-category="design" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project4.jpg" alt="College News Letter Design" class="project-img" onerror="this.src='https://placehold.co/600x380/0f3460/e94560?text=Project+4'" />
+            <div class="project-overlay">
+              <a href="https://www.figma.com/proto/aY8XTHVYYLpJIQ1yqPRGgk/News-Letter?node-id=1-2&starting-point-node-id=1%3A2" class="project-link" aria-label="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="" class="project-link" aria-label="GitHub" onclick="alert('Unable to upload figma project on github')"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">UI/UX</span>
+            <h4 class="project-title">College News Letter Design</h4>
+            <p class="project-desc">A modern and engaging design for the college's monthly news letter, featuring articles, events, and announcements.</p>
+            <div class="project-tags">
+              <span>Figma</span><span>Photoshop</span><span>Canva</span>
+          </div>
+        </div>
+      </div>
+</div>
+      <!-- Project 5 -->
+      <div class="col-md-6 col-lg-4 project-item" data-project-category="mobile" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project5.jpg" alt="Unit Convertor" class="project-img" onerror="this.src='https://placehold.co/600x380/0f3460/e94560?text=Project+5'" />
+            <div class="project-overlay">
+              <a class="project-link" aria-label="Live Demo" onclick="alert('Live demo not available for this project.')"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="https://github.com/Avii-patil/currency-Convertor" class="project-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Mobile App</span>
+            <h4 class="project-title">Unit Convertor</h4>
+            <p class="project-desc">A versatile unit conversion app with support for various measurement systems and a clean, intuitive interface.</p>
+            <div class="project-tags">
+              <span>XML</span><span>Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6
+      <div class="col-md-6 col-lg-4 project-item" data-project-category="web" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project6.jpg" alt="AI Blog Generator" class="project-img" onerror="this.src='https://placehold.co/600x380/0f3460/e94560?text=Project+6'" />
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="#" class="project-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Web App</span>
+            <h4 class="project-title">AI Content Generator</h4>
+            <p class="project-desc">GPT-powered content platform with SEO optimization, scheduling, and multi-platform publishing.</p>
+            <div class="project-tags">
+              <span>OpenAI</span><span>Next.js</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- ============================================================
+  EXPERIENCE / TIMELINE SECTION
+============================================================ -->
+<section id="experience" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Journey</span>
+      <h2 class="section-title">Experience & Education</h2>
+    </div>
+
+    <div class="timeline" id="timeline">
+
+      <!-- EDIT: Update all experience entries with your own -->
+      <!-- <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-badge work">Work</span>
+            <span class="timeline-date"><i class="bi bi-calendar3"></i> 2022 – Present</span>
+          </div>
+          <h4 class="timeline-title">Senior Full Stack Developer</h4>
+          <p class="timeline-company"><i class="bi bi-building"></i> TechCorp Inc, San Francisco</p>
+          <p class="timeline-desc">Led development of microservices architecture serving 500k+ users. Reduced API response time by 60%. Mentored 3 junior developers.</p>
+          <div class="timeline-tags">
+            <span>React</span><span>Node.js</span><span>AWS</span><span>Docker</span>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-badge work">Client Based Project</span>
+            <span class="timeline-date"><i class="bi bi-calendar3"></i> 2025 – 2025</span>
+          </div>
+          <h4 class="timeline-title">Full Stack Developer</h4>
+          <p class="timeline-company"><i class="bi bi-building"></i> Capstone Project Leader</p>
+          <p class="timeline-desc">Led the development of a full-stack web application from conception to deployment. Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
+          <div class="timeline-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>MySQL</span><span>Php</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-badge work">Inter</span>
+            <span class="timeline-date"><i class="bi bi-calendar3"></i> 2025 – 2025</span>
+          </div>
+          <h4 class="timeline-title">Full Stack Developer Intern</h4>
+          <p class="timeline-company"><i class="bi bi-building"></i>A2Z It Hub Pvt. Ltd.</p>
+          <p class="timeline-desc">Assisted in developing and maintaining web applications. Gained hands-on experience with modern development tools and frameworks.</p>
+          <div class="timeline-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span><span>Php</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-badge edu">Education</span>
+            <span class="timeline-date"><i class="bi bi-calendar3"></i> 2023 – 2026</span>
+          </div>
+          <h4 class="timeline-title">Diploma in Computer Engineering</h4>
+          <p class="timeline-company"><i class="bi bi-mortarboard"></i> Government Polytechnic, Ahmednagar</p>
+          <p class="timeline-desc">Completed with distinction. Gained strong foundation in programming and computer systems.</p>
+          <div class="timeline-tags">
+            <span>Algorithms</span><span>Data Structures</span><span>OS</span><span>Networking</span><span>Programming</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-badge edu">SSC</span>
+            <span class="timeline-date"><i class="bi bi-calendar3"></i> 2023</span>
+          </div>
+          <h4 class="timeline-title">School Student </h4>
+          <p class="timeline-company"><i class="bi bi-building"></i>Jijamata Madhymick Vidyalay, Bhende</p>
+          <p class="timeline-desc">Studied at the school and completed my SSC examination. 5th - 10th</p>
+          <div class="timeline-tags">
+            <span>English</span><span>Hindi</span><span>Marathi</span><span>Basic Mathematics</span><span>Basic Science</span><span>Social Science</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+<!-- ============================================================
+  CERTIFICATIONS SECTION
+============================================================ -->
+<section id="certifications" class="section-pad">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Credentials</span>
+      <h2 class="section-title">Certifications & Awards</h2>
+    </div>
+    <!-- EDIT: Replace with your own certifications -->
+    <div class="row g-4 mt-2">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-award"></i></div>
+          <div class="cert-body">
+            <h5 class="cert-title">HTML Certified Developer</h5>
+            <p class="cert-issuer"><i class="bi bi-building"></i> A2Z It Hub Pvt. Ltd. </p>
+            <span class="cert-date">Issued: Jun 2025</span>
+          </div>
+          <!-- EDIT: Add your verification URL -->
+          <a href="https://a2zithub.com/learn/certificate/d?cert_no=A2Z12595S864" class="cert-verify" target="_blank">Verify <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-patch-check"></i></div>
+          <div class="cert-body">
+            <h5 class="cert-title">CSS3 Certified Developer</h5>
+            <p class="cert-issuer"><i class="bi bi-building"></i> A2Z It Hub Pvt. Ltd. </p>
+            <span class="cert-date">Issued: Jul 2025</span>
+          </div>
+          <a href="https://a2zithub.com/learn/certificate/d?cert_no=A2Z12929S864" class="cert-verify" target="_blank">Verify <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-trophy"></i></div>
+          <div class="cert-body">
+            <h5 class="cert-title">BootStrap Developer</h5>
+            <p class="cert-issuer"><i class="bi bi-building"></i> A2Z It Hub Pvt. Ltd. </p>
+            <span class="cert-date">Issued: Jul 2025</span>
+          </div>
+          <a href="https://a2zithub.com/learn/certificate/d?cert_no=A2Z12927S864" class="cert-verify" target="_blank">Verify <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-shield-check"></i></div>
+          <div class="cert-body">
+            <h5 class="cert-title">JavaScript Developer</h5>
+            <p class="cert-issuer"><i class="bi bi-building"></i> A2Z It Hub Pvt. Ltd. </p>
+            <span class="cert-date">Issued: Aug 2025</span>
+          </div>
+          <a href="https://a2zithub.com/learn/certificate/d?cert_no=A2Z13118S864" class="cert-verify" target="_blank">Verify <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-star"></i></div>
+          <div class="cert-body">
+            <h5 class="cert-title">Fundamentales of information security</h5>
+            <p class="cert-issuer"><i class="bi bi-building"></i> Infosys SpringBoard</p>
+            <span class="cert-date">Awarded: Mar 2026</span>
+          </div>
+          <a onclick="alert('Unavailable to redirect Infosys Spring Board protal')" class="cert-verify" target="_blank">Details <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-github"></i></div>
+          <div class="cert-body">
+            <h5 class="cert-title">Database Fundamentals : Database Concepts</h5>
+            <p class="cert-issuer"><i class="bi bi-building"></i> Infosys Spring Board</p>
+            <span class="cert-date">Issued: Nov 2024</span>
+          </div>
+          <a onclick="alert('Unavailable to redirect Infosys Spring Board protal')" class="cert-verify" target="_blank">Verify <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  GITHUB STATS SECTION
+============================================================ -->
+<section id="github" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Open Source</span>
+      <h2 class="section-title">GitHub Activity</h2>
+    </div>
+    <!-- EDIT: Replace "alexKhatik-dev" with your actual GitHub username in ALL src URLs below -->
+    <div class="github-grid" data-aos="fade-up">
+      <img src="https://github-readme-stats.vercel.app/api?username=Avii-Patil&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=e94560&icon_color=e94560&text_color=c9d1d9" alt="GitHub Stats" class="github-card" onerror="this.style.display='none'" />
+      <img src="https://github-readme-streak-stats.herokuapp.com?user=Avii-Patil&theme=radical&hide_border=true&background=0d1117&ring=e94560&fire=e94560&currStreakLabel=e94560" alt="GitHub Streak" class="github-card" onerror="this.style.display='none'" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Avii-Patil&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=e94560&text_color=c9d1d9" alt="Top Languages" class="github-card" onerror="this.style.display='none'" />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  TESTIMONIALS SECTION
+============================================================ -->
+<section id="testimonials" class="section-pad">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Social Proof</span>
+      <h2 class="section-title">What People Say</h2>
+    </div>
+    <div class="testimonials-track-wrap" data-aos="fade-up">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <!-- EDIT: Replace all testimonial data with real ones -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Avishkar is one of the most talented developers I've worked with. His ability to translate complex requirements into clean, maintainable code is outstanding."</p>
+          <div class="testimonial-author">
+            <!-- EDIT: Replace with real client photo at images/client1.jpg -->
+            <img src="images/client1.jpg" alt="Dipali Khatik" onerror="this.src='https://placehold.co/50x50/e94560/fff?text=DK'" />
+            <div>
+              <strong>Dipali Khatik</strong>
+              <span>Intern, Tata Motors, PCMC</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Delivered our product 2 weeks early with zero bugs. Avishkar's attention to detail and proactive communication made the entire project a pleasure."</p>
+          <div class="testimonial-author">
+            <img src="images/client2.jpg" alt="Avinash Patil" onerror="this.src='https://placehold.co/50x50/e94560/fff?text=AP'" />
+            <div>
+              <strong>Avinash Patil</strong>
+              <span>President, Janseva Charitable Center, Pune</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Avishkar's technical skills and problem-solving abilities are exceptional. He consistently delivers high-quality work under tight deadlines."</p>
+          <div class="testimonial-author">
+            <img src="images/client3.jpg" alt="Avinash Patil" onerror="this.src='https://placehold.co/50x50/e94560/fff?text=TP'" />
+            <div>
+              <strong>Tejal Patil</strong>
+              <span>Intern, CA</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Avishkar's full-stack expertise is rare. He can talk UI/UX in the morning and database optimization in the afternoon. A true force multiplier for any team."</p>
+          <div class="testimonial-author">
+            <img src="images/client4.jpg" alt="Ravindra Patil" onerror="this.src='https://placehold.co/50x50/e94560/fff?text=RP'" />
+            <div>
+              <strong>Ravindra Patil</strong>
+              <span>Vice President, Janseva Charitable Center, Pune</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Avishkar's is one of the best interns and quick learners I've had the pleasure of working with."</p>
+          <div class="testimonial-author">
+            <img src="images/client5.jpg" alt="Rahul Misal" onerror="this.src='https://placehold.co/50x50/e94560/fff?text=RM'" />
+            <div>
+              <strong>Rahul Misal</strong>
+              <span>CEO, A2Z It Hub Pvt. Ltd.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-controls">
+      <button class="t-btn" id="tPrev" aria-label="Previous"><i class="bi bi-arrow-left"></i></button>
+      <div class="t-dots" id="tDots"></div>
+      <button class="t-btn" id="tNext" aria-label="Next"><i class="bi bi-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  BLOG / ARTICLES SECTION
+============================================================ -->
+<section id="blog" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Writing</span>
+      <h2 class="section-title">Latest Articles</h2>
+    </div>
+    <!-- EDIT: Replace with your actual blog posts and links -->
+    <div class="row g-4 mt-2">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-tag">Concept</span>
+            <span class="blog-date">May 15, 2026</span>
+          </div>
+          <h5 class="blog-title">Building Scalable Device Tracking System With Efficient Architecture</h5>
+          <p class="blog-excerpt">Learn how to design and implement a robust device tracking system that can handle large volumes of data with minimal latency.</p>
+          <!-- EDIT: Add your actual article URL -->
+          <a href="https://gist.github.com/Avii-Patil/37cbc526183bdbee409c6e36934ab886" class="blog-link" target="_blank">Read Article <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-tag">Learning</span>
+            <span class="blog-date">May 15, 2026</span>
+          </div>
+          <h5 class="blog-title">How Cross-Platform Systems Exchange Data in Real Time</h5>
+          <p class="blog-excerpt">Discover the techniques and protocols used to enable seamless data exchange between different platform architectures in real-time scenarios.</p>
+          <a href="https://gist.github.com/Avii-Patil/c950a75582d8b94fd3fb8cac4ca42144" class="blog-link" target="_blank">Read Article <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-tag">Understanding</span>
+            <span class="blog-date">May 15, 2026</span>
+          </div>
+          <h5 class="blog-title">How GPS, IP Address, and Device Tracking Work Together</h5>
+          <p class="blog-excerpt">Understand the integration of GPS, IP address, and device tracking technologies to provide comprehensive location-based services.</p>
+          <a href="https://gist.github.com/Avii-Patil/ca62d9c3c5316bed6ac01d1d59cfde6b" class="blog-link" target="_blank">Read Article <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  CONTACT SECTION
+============================================================ -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's Work Together</h2>
+    </div>
+    <div class="row g-5 mt-2">
+      <div class="col-lg-5" data-aos="fade-right">
+        <p class="contact-intro">I'm currently available for freelance projects and full-time Intern. If you have a project in mind or just want to say hi, my inbox is always open.</p>
+        <!-- EDIT: Replace with your contact details -->
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:alex@alexKhatik.dev" class="contact-value">avishkarkhatik15@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Pune, Maharashtra, India</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-socials mt-4">
+          <!-- EDIT: Replace # with your actual social URLs -->
+          <a href="https://github.com/Avii-Patil" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/avishkar-khatik" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/avishkar_patil15" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <form id="contactForm" class="contact-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="Avishkar Khatik" required />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" name="email" class="form-control" placeholder="Aviii@example.com" required />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="Project Inquiry" required />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-primary-custom w-100" id="submitBtn">
+                <span id="btnText">Send Message <i class="bi bi-send"></i></span>
+                <span id="btnLoading" style="display:none"><i class="bi bi-hourglass-split me-2"></i>Sending...</span>
+              </button>
+            </div>
+            <div id="formSuccess" class="alert alert-success d-none mt-2">
+              <i class="bi bi-check-circle me-2"></i>Message sent! I'll get back to you within 24 hours.
+            </div>
+            <div id="formError" class="alert alert-danger d-none mt-2">
+              <i class="bi bi-exclamation-circle me-2"></i>Something went wrong. Please email me directly.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  FOOTER
+============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <!-- EDIT: Change initials and name -->
+        <span class="footer-logo">AK</span>
+        <span class="footer-name">Avishkar Khatik</span>
+      </div>
+      <p class="footer-copy">
+        <!-- EDIT: Update year and name -->
+        © 2026 Avishkar Khatik. Designed & built with ❤️
+      </p>
+      <div class="footer-socials">
+        <a href="https://github.com/Avii-Patil" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/avishkar-khatik" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://instagram.com/avishkar_patil15" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- Particles (tsParticles lite) -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
