@@ -89,9 +89,9 @@ Please read this carefully before using anything from this repository:
 
 Have a question, a project idea, or just want to say hi?
 
-- **Email:** your@email.com
-- **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- **GitHub:** [github.com/your-username](https://github.com/your-username)
+- **Email:** avishkarkhatik15@gmail.com
+- **LinkedIn:** [linkedin.com/in/your-profile](https://www.linkedin.com/in/avishkar-khatik-aa3a02356/)
+- **GitHub:** [github.com/your-username](https://github.com/Avii-Patil)
 
 ---
 
