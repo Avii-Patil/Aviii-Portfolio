@@ -87,6 +87,26 @@
 <div id="cursor-outline"></div>
 
 <!-- ============================================================
+  COMMAND PALETTE
+============================================================ -->
+<div id="cmdOverlay">
+  <div id="cmdPalette">
+    <div id="cmdSearch">
+      <i class="bi bi-search" id="cmdIcon"></i>
+      <input type="text" id="cmdInput" placeholder="Type a command or search..." autocomplete="off" spellcheck="false" />
+      <span id="cmdEsc">esc</span>
+    </div>
+    <div id="cmdList"></div>
+    <div id="cmdFooter">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> select</span>
+      <span><kbd>Esc</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
   NAVBAR
 ============================================================ -->
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
@@ -107,6 +127,12 @@
         <li class="nav-item"><a class="nav-link" href="#certifications">Certs</a></li>
         <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+            <button class="cmd-trigger" id="cmdTrigger" aria-label="Open command palette">
+              <i class="bi bi-search"></i>
+              <span class="cmd-trigger-label">⌘K</span>
+            </button>
+        </li>
         <li class="nav-item">
           <button class="btn-theme-toggle" id="themeToggle" aria-label="Toggle theme">
             <i class="bi bi-moon-fill" id="themeIcon"></i>
