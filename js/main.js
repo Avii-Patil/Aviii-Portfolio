@@ -27,7 +27,7 @@ AOS.init({
   duration: 700,
   easing: 'ease-out-quart',
   once: true,
-  offset: 60
+  offset: window.innerWidth < 768 ? 20 : 60
 });
 
 /* ============================================================
