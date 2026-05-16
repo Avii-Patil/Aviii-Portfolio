@@ -528,5 +528,144 @@ if ('IntersectionObserver' in window) {
 }
 
 /* ============================================================
+   COMMAND PALETTE
+============================================================ */
+(function () {
+  const overlay  = document.getElementById('cmdOverlay');
+  const input    = document.getElementById('cmdInput');
+  const list     = document.getElementById('cmdList');
+  const trigger  = document.getElementById('cmdTrigger');
+
+  const commands = [
+    { group: 'Navigate',  icon: 'bi-house',          title: 'Home',         sub: 'Go to top',                  action: () => scrollTo('#hero') },
+    { group: 'Navigate',  icon: 'bi-person',          title: 'About me',     sub: 'Who I am',                   action: () => scrollTo('#about') },
+    { group: 'Navigate',  icon: 'bi-code-slash',      title: 'Skills',       sub: 'My tech stack',              action: () => scrollTo('#skills') },
+    { group: 'Navigate',  icon: 'bi-folder2-open',    title: 'Projects',     sub: 'Things I have built',        action: () => scrollTo('#projects') },
+    { group: 'Navigate',  icon: 'bi-briefcase',       title: 'Experience',   sub: 'My work history',            action: () => scrollTo('#experience') },
+    { group: 'Navigate',  icon: 'bi-patch-check',     title: 'Certifications', sub: 'Courses & certificates',  action: () => scrollTo('#certifications') },
+    { group: 'Navigate',  icon: 'bi-chat-quote',      title: 'Reviews',      sub: 'What people say',            action: () => scrollTo('#testimonials') },
+    { group: 'Navigate',  icon: 'bi-envelope',        title: 'Contact',      sub: 'Get in touch',               action: () => scrollTo('#contact') },
+    { group: 'Links',     icon: 'bi-github',          title: 'GitHub',       sub: 'github.com/Avii-Patil',      action: () => open('https://github.com/Avii-Patil'), tag: '↗' },
+    { group: 'Links',     icon: 'bi-linkedin',        title: 'LinkedIn',     sub: 'linkedin.com/in/avishkar-khatik', action: () => open('https://www.linkedin.com/in/avishkar-khatik'), tag: '↗' },
+    { group: 'Links',     icon: 'bi-instagram',       title: 'Instagram',    sub: '@avishkar_patil15',          action: () => open('https://instagram.com/avishkar_patil15'), tag: '↗' },
+    { group: 'Actions',   icon: 'bi-download',        title: 'Download Resume', sub: 'Get my latest CV',        action: () => open('assets/resume.pdf'), tag: 'PDF' },
+    { group: 'Actions',   icon: 'bi-moon-fill',       title: 'Toggle theme', sub: 'Switch dark / light',        action: () => { close(); document.getElementById('themeToggle').click(); } },
+    { group: 'Actions',   icon: 'bi-envelope-plus',   title: 'Email me',     sub: 'avishkarkhatik15@gmail.com', action: () => open('mailto:avishkarkhatik15@gmail.com'), tag: '↗' },
+  ];
+
+  function scrollTo(id) {
+    close();
+    const el = document.querySelector(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function open(url) { close(); window.open(url, '_blank'); }
+  function close() {
+    overlay.classList.remove('open');
+    input.value = '';
+    render('');
+  }
+  function show() {
+    overlay.classList.add('open');
+    setTimeout(() => input.focus(), 50);
+    render('');
+  }
+
+  let activeIdx = 0;
+
+  function render(query) {
+    const q = query.toLowerCase().trim();
+    const filtered = q
+      ? commands.filter(c =>
+          c.title.toLowerCase().includes(q) ||
+          c.sub.toLowerCase().includes(q) ||
+          c.group.toLowerCase().includes(q)
+        )
+      : commands;
+
+    if (!filtered.length) {
+      list.innerHTML = '<div class="cmd-no-results">No results for "' + query + '"</div>';
+      return;
+    }
+
+    activeIdx = 0;
+    const groups = [...new Set(filtered.map(c => c.group))];
+    list.innerHTML = groups.map(g => {
+      const items = filtered.filter(c => c.group === g);
+      return `<div class="cmd-group-label">${g}</div>` +
+        items.map((c, i) => {
+          const idx = filtered.indexOf(c);
+          return `<div class="cmd-item${idx === 0 ? ' active' : ''}" data-idx="${idx}">
+            <div class="cmd-item-icon"><i class="bi ${c.icon}"></i></div>
+            <div class="cmd-item-text">
+              <div class="cmd-item-title">${c.title}</div>
+              <div class="cmd-item-sub">${c.sub}</div>
+            </div>
+            ${c.tag ? `<span class="cmd-item-tag">${c.tag}</span>` : ''}
+          </div>`;
+        }).join('');
+    }).join('');
+
+    list.querySelectorAll('.cmd-item').forEach(el => {
+      el.addEventListener('click', () => {
+        const idx = parseInt(el.dataset.idx);
+        filtered[idx].action();
+      });
+      el.addEventListener('mouseenter', () => {
+        setActive(parseInt(el.dataset.idx));
+      });
+    });
+  }
+
+  function setActive(idx) {
+    activeIdx = idx;
+    list.querySelectorAll('.cmd-item').forEach(el => {
+      el.classList.toggle('active', parseInt(el.dataset.idx) === activeIdx);
+    });
+    const activeEl = list.querySelector('.cmd-item.active');
+    if (activeEl) activeEl.scrollIntoView({ block: 'nearest' });
+  }
+
+  function getFiltered() {
+    const q = input.value.toLowerCase().trim();
+    return q ? commands.filter(c =>
+      c.title.toLowerCase().includes(q) ||
+      c.sub.toLowerCase().includes(q) ||
+      c.group.toLowerCase().includes(q)
+    ) : commands;
+  }
+
+  input.addEventListener('input', () => render(input.value));
+
+  input.addEventListener('keydown', e => {
+    const filtered = getFiltered();
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActive(Math.min(activeIdx + 1, filtered.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActive(Math.max(activeIdx - 1, 0));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (filtered[activeIdx]) filtered[activeIdx].action();
+    } else if (e.key === 'Escape') {
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      overlay.classList.contains('open') ? close() : show();
+    }
+    if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+  });
+
+  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+  trigger && trigger.addEventListener('click', show);
+
+  render('');
+})();
+
+/* ============================================================
    END OF main.js
 ============================================================ */
