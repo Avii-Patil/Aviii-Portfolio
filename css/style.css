@@ -948,12 +948,9 @@ a.contact-value:hover { color: var(--accent); }
 /* ============================================================
    RESPONSIVE
 ============================================================ */
-
-/* ---- Tablet (≤ 991px) ---- */
 @media (max-width: 991px) {
   .hero-container { grid-template-columns: 1fr; gap: 3rem; }
   .hero-visual { display: none; }
-  .profile-badge-1, .profile-badge-2 { display: none; }
 
   .timeline::before { left: 20px; }
   .timeline-item, .timeline-item.right {
@@ -964,90 +961,23 @@ a.contact-value:hover { color: var(--accent); }
 
   .testimonial-card { flex: 0 0 calc(50% - 0.75rem); }
 
-  .about-exp-badge { bottom: -16px; right: -8px; width: 100px; height: 100px; }
-  .about-exp-badge strong { font-size: 1.6rem; }
+  .profile-badge-1, .profile-badge-2 { display: none; }
 }
 
-/* Navbar */
-  #mainNav .container { flex-wrap: nowrap; }
-  .navbar-brand { font-size: 1.3rem; }
-  .navbar-toggler { flex-shrink: 0; }
-  #navMenu {
-    background: var(--bg-nav);
-    border-top: 1px solid var(--border);
-    padding: 0.75rem 0;
-    margin-top: 0.5rem;
-    border-radius: var(--radius);
-  }
-  #navMenu .navbar-nav { gap: 0 !important; }
-  #navMenu .nav-link {
-    padding: 0.6rem 1rem !important;
-    border-radius: 0;
-    border-bottom: 1px solid var(--border);
-  }
-  #navMenu .nav-item:last-child { border-bottom: none; }
-/* Hero */
-  #hero { padding: 100px 0 60px; }
-  .hero-name { font-size: clamp(2rem, 9vw, 3rem); }
-  .hero-roles { font-size: 1.1rem; }
-  .hero-bio { font-size: 0.95rem; max-width: 100%; }
-  .hero-cta { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-  .hero-cta .btn-primary-custom,
-  .hero-cta .btn-outline-custom,
-  .hero-cta .btn-ghost-custom { width: 100%; justify-content: center; }
-  .scroll-indicator { display: none; }
-
-  /* Stats */
-  .stat-number { font-size: 2.2rem; }
-  .stat-plus { font-size: 1.6rem; }
-/* About */
-  .about-img-wrap { margin-bottom: 60px; }
-  .about-exp-badge { bottom: -20px; right: -4px; width: 85px; height: 85px; }
-  .about-exp-badge strong { font-size: 1.4rem; }
-  .about-exp-badge span { font-size: 0.65rem; }
-  .about-info-grid { grid-template-columns: 1fr; gap: 0.6rem; }
-  .about-greeting { font-size: 1.3rem; }
-
-  /* Skills */
+@media (max-width: 767px) {
+  .section-pad { padding: 70px 0; }
+  .hero-cta { flex-direction: column; align-items: flex-start; }
+  .about-exp-badge { bottom: -16px; right: -8px; width: 90px; height: 90px; }
+  .testimonial-card { flex: 0 0 calc(100% - 0rem); }
+  .about-info-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; text-align: center; }
   .skills-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
-  .skills-filter { gap: 6px; }
-  .filter-btn { font-size: 0.8rem; padding: 5px 14px; }
-
-  /* Timeline */
-  .timeline-content { padding: 1rem; }
-  .timeline-header { flex-direction: column; align-items: flex-start; gap: 4px; }
-/* Certifications */
-  .cert-card { flex-direction: column; }
-  .cert-verify { position: static; margin-top: 0.5rem; }
-
-  /* Testimonials */
-  .testimonial-card { flex: 0 0 100%; padding: 1.25rem; }
-
-  /* Footer */
-  .footer-inner { flex-direction: column; text-align: center; align-items: center; }
-  .footer-brand { justify-content: center; }
-  .footer-socials { justify-content: center; }
-
-  .scroll-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 1rem; }
 }
 
-/* ---- Small mobile (≤ 480px) ---- */
 @media (max-width: 480px) {
-  .section-pad { padding: 55px 0; }
-  .hero-name { font-size: 2rem; }
-  .hero-tag { font-size: 0.78rem; }
-  .hero-content, .hero-bio { word-break: break-word; }
-
-  /* Stats — 2 per row */
-  .stats-section .row > [class*="col-"] { flex: 0 0 50%; max-width: 50%; }
-  .stat-number { font-size: 1.9rem; }
-
-  .skills-filter { justify-content: flex-start; }
-  .project-img-wrap { aspect-ratio: 16/9; }
-  .github-grid { grid-template-columns: 1fr; }
-  .btn-primary-custom, .btn-outline-custom { font-size: 0.85rem; padding: 0.65rem 1.25rem; }
-  .preloader-logo { font-size: 2.5rem; }
-  .scroll-top { bottom: 16px; right: 16px; }
+  .hero-name { font-size: 2.5rem; }
+  .scroll-top { bottom: 20px; right: 20px; }
+  .profile-badge-1, .profile-badge-2 { display: none; }
 }
 
 /* AOS override */
