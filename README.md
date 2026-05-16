@@ -1,5 +1,5 @@
 
-  # Personal Portfolio — AK
+  # Personal Portfolio — Avishkar Khatik
 
   > A personal space on the internet to showcase my work, skills, and story.
 
