@@ -83,18 +83,24 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-head); font-weight: 700; }
 }
 #preloader.hidden { opacity: 0; visibility: hidden; }
 
-.preloader-inner { text-align: center; }
+.preloader-inner {
+  text-align: center;
+  padding: 0 1.5rem;
+  width: 100%;
+}
 
 .preloader-logo {
   font-family: var(--font-head);
-  font-size: 3.5rem; font-weight: 800;
+  font-size: clamp(2rem, 10vw, 3.5rem);
+  font-weight: 800;
   color: var(--accent);
   letter-spacing: -2px;
   animation: pulse 1s ease-in-out infinite alternate;
 }
 
 .preloader-bar {
-  width: 200px; height: 3px;
+  width: min(200px, 70vw);
+  height: 3px;
   background: rgba(255,255,255,0.1);
   border-radius: 3px; margin: 1.5rem auto 0;
   overflow: hidden;
@@ -833,6 +839,30 @@ a.contact-value:hover { color: var(--accent); }
   transition: color var(--transition);
 }
 .footer-socials a:hover { color: var(--accent); }
+
+/* Footer responsive — stacks cleanly at all sizes */
+@media (max-width: 767px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .footer-brand {
+    justify-content: center;
+    width: 100%;
+  }
+  .footer-copy {
+    width: 100%;
+    text-align: center;
+    order: 3;
+  }
+  .footer-socials {
+    justify-content: center;
+    width: 100%;
+    order: 2;
+  }
+}
 
 /* ============================================================
    SCROLL TO TOP
